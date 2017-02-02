@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Welcome!
+title: Hello world!
 ---
 
 Olá! Eu sou o João Paulo e este é o primeiro post deste blog! Blog powered by [Jekyll](http://jekyllrb.com), 
