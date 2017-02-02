@@ -1,0 +1,29 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+
+# Setup
+title:            John Owl
+tagline:          'Blog sobre desenvolvimento de software.'
+description:      'Um blog sobre desenvolvimento de software por <a href="https://github.com/johnowl">@johnowl</a>.'
+url:              http://blog.johnowl.com
+baseurl:          /
+
+author:
+  name:           'João Paulo Gomes'
+  url:            https://twitter.com/john_owl
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+
+# Gems
+gems: [jekyll-paginate, jekyll-gist, redcarpet, pygments.rb]
