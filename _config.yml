@@ -1,9 +1,9 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:rouge
+#markdown:         redcarpet
+highlighter: rouge
 
 # Permalinks
-permalink:/:title/
+permalink: /:title/
 
 
 # Setup
