@@ -1,6 +1,7 @@
 ---
 layout: post
 title: O que é um teste de unidade
+comments: true
 ---
 
 Teste de unidade, também conhecido como teste unitário, é um teste de caixa branca. Isso significa que temos acesso ao código fonte da aplicação que está sendo testada. 
