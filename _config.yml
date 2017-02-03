@@ -25,4 +25,7 @@ github:
   repo:           https://github.com/poole/hyde
 
 # Gems
-gems: [jekyll-paginate, jekyll-gist, redcarpet, pygments.rb]
+gems: 
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-sitemap
