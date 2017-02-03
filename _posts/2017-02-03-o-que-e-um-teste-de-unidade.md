@@ -7,7 +7,9 @@ Teste de unidade, também conhecido como teste unitário, é um teste de caixa b
 
 Uma unidade é a menor parte do nosso software, em linguagens orientadas a objetos como Java e C# a menor parte é a classe. 
 
-Sabendo disso, podemos dizer que teste de unidade é código escrito para validar o comportamento de uma unidade de software. Ou seja, um teste de unidade valida se ao invocar um método de uma classe com determinados parâmetros ele retorna o resultado esperado.
+Sabendo disso, podemos dizer que teste de unidade é feito para validar o comportamento de uma unidade de software. Ou seja, um teste de unidade valida se ao invocar um método de uma classe com determinados parâmetros ele retorna o resultado esperado.
+
+
 
 
 
