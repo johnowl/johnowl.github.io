@@ -16,7 +16,7 @@ Veja a lista abaixo:
 * [Gerenciador de pacotes .NET Core (Nuget)](https://marketplace.visualstudio.com/items?itemName=ksubedi.net-core-project-manager)
 * [Ícones para VS Code](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
 
-Para instalar as extensões basta pressionar Ctrl+P na janela do VS Code e digitar o comando "ext install <nome-da-extensão>". A extensão será listada na barra lateral esquerda, basta clicar no botão "Install". Abaixo segue o comando de cada extensão:
+Para instalar as extensões basta pressionar Ctrl+P na janela do VS Code e digitar o comando "ext install &lt;nome-da-extensão&gt;". A extensão será listada na barra lateral esquerda, basta clicar no botão "Install". Abaixo segue o comando de cada extensão:
 
 * ext install csharp
 * ext install net-core-project-manager
