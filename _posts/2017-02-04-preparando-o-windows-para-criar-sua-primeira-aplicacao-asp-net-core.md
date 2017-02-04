@@ -23,4 +23,4 @@ O próximo passo é instalar o Yeoman, ele é um pacote npm. Além desse pacote 
 
 O próximo e último passo, antes de poder começar a trabalhar nossa aplicação ASP.NET Core, é instalar o gerador do Yeoman. Esse é o responsável por criar nossos projetos .NET Core. Para fazer a instalação digite o comando `npm install -g generator-aspnet`.
 
-Agora nosso sistema operacional está pronto para criarmos nossa primeira aplicação ASP.NET Core. Veja em [Construindo uma aplicação web com ASP.NET Core no Visual Studio Code]({{site.baseurl}}/construindo-uma-aplicacao-web-com-asp-net-core-no-visual-studio-code)/.
+Agora nosso sistema operacional está pronto para criarmos nossa primeira aplicação ASP.NET Core. Veja em [Construindo uma aplicação web com ASP.NET Core no Visual Studio Code]({{site.baseurl}}/construindo-uma-aplicacao-web-com-asp-net-core-no-visual-studio-code).
