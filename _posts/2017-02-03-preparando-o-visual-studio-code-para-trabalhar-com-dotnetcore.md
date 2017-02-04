@@ -22,6 +22,8 @@ Para instalar as extensões basta pressionar Ctrl+P na janela do VS Code e digit
 * ext install net-core-project-manager
 * ext install vscode-icons
 
+![Visual Studio Code com extensões úteis instaladas]({{site.baseurl}}/public/images/2017-02-06/vscode.png)
+
 Pronto! Seu Visual Studio Code está pronto para começar. O próximo passo pode ser a [instalação do Yeoman]({{site.baseurl}}/preparando-o-windows-para-criar-sua-primeira-aplicacao-asp-net-core.md).
 
 
