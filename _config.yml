@@ -16,13 +16,7 @@ author:
   name:           'João Paulo Gomes'
   url:            https://twitter.com/john_owl
 
-paginate:         5
-
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
+paginate:         10
 
 # Gems
 gems: 

@@ -2,9 +2,11 @@
 layout: post
 title: Características de um bom teste de unidade
 comments: true
+categories: 
+    - Testes de unidade
 ---
 
-Um bom teste de unidade deve possuir, pelo menos, as 8 características que seguem.
+Um bom [teste de unidade]({{site.baseurl}}/o-que-e-um-teste-de-unidade) deve possuir, pelo menos, as 8 características que seguem.
 
 1. **Automatizado**: um bom teste não precisa de interferência humana para funcionar, no máximo você clica em um botão na sua IDE favorita e os testes são executados. Você recebe o feedback se executaram com sucesso ou falharam. Ao usar testes de unidade automatizados facilitamos a cultura de DevOps, pois dessa forma é possível executar todos os testes da aplicação durante a integração contínua.
 

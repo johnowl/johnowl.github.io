@@ -11,27 +11,26 @@ title: Home
         {{ post.title }}
       </a>
     </h1>
-
+     {{ post.excerpt }}
     <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
+    
   </div>
   {% endfor %}
 </div>
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Antigos</a>
   {% else %}
-    <span class="pagination-item older">Older</span>
+    <span class="pagination-item older">Antigos</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">Novos</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Novos</a>
     {% endif %}
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <span class="pagination-item newer">Novos</span>
   {% endif %}
 </div>

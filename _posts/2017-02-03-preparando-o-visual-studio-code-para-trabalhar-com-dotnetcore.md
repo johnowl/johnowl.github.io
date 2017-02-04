@@ -2,11 +2,15 @@
 layout: post
 title: Preparando o Visual Studio Code para trabalhar com .NET Core
 comments: true
+categories: 
+    - .NET Core
+    - Visual Studio Code
+    - Microsoft
 ---
 
-O Visual Studio Code é um ótimo editor de código extensível e customizável. Se você está vindo do Visual Studio, saiba que o VS Code não é uma IDE, ele é somente um editor de código, mas é um editor sensacional e completo.
+O [Visual Studio Code](https://code.visualstudio.com/) é um ótimo editor de código pois é leve, extensível e customizável. Vamos mostrar algumas extensões úteis que você deve instalar antes de começar a desenvolver software com .NET Core.
 
-Abaixo seguem algumas extensões úteis para começar a desenvolver software com .NET Core no VS Code:
+Veja a lista abaixo:
 
 * [C# para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 * [Gerenciador de pacotes .NET Core (Nuget)](https://marketplace.visualstudio.com/items?itemName=ksubedi.net-core-project-manager)

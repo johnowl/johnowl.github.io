@@ -2,7 +2,8 @@
 layout: post
 title: Hello world!
 comments: true
-slug: hello-world
+categories: 
+    - Random
 ---
 
 Olá! Eu sou o João Paulo e este é o primeiro post deste blog! Blog powered by [Jekyll](http://jekyllrb.com), 
