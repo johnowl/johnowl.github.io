@@ -5,24 +5,7 @@
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-
-  <meta property="og:site_name" content="blog.johnowl.com">
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-
-    {% if page.description == "" or page.description == nil %}
-    <meta property="og:description" content="Um blog sobre desenvolvimento de software por John Owl.">
-  {% else %}
-    <meta property="og:description" content="{{ page.description }}">
-  {% endif %}
-  
-  {% if page.image == "" or page.image == nil %}
-    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/public/images/fb_capa.jpg">
-  {% else %}
-    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}">
-  {% endif %}  
-  
+  {% include facebook_meta.html %}
 
   <title>
     {% if page.title == "Home" %}
