@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
 
-  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:site_name" content="Um blog sobre desenvolvimento de software por @johnowl">
   <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:url" content="{{ page.url }}">
 
     {% if page.description == "" or page.description == nil %}
     <meta property="og:description" content="{{ site.description }}">
@@ -17,7 +18,7 @@
   {% endif %}
   
   {% if page.image == "" or page.image == nil %}
-    <meta property="og:image" content="{{ site.url }}/{{ site.baseurl }}/public/images/fb_capa.jpg">
+    <meta property="og:image" content="{{ site.url }}{ site.baseurl }/public/images/fb_capa.jpg">
   {% else %}
     <meta property="og:image" content="{{ site.url }}/{{ site.baseurl }}/{{ page.image }}">
   {% endif %}  
