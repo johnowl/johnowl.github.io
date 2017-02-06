@@ -6,6 +6,7 @@ categories:
     - .NET Core
     - Visual Studio Code
     - Microsoft
+description: O Visual Studio Code é um ótimo editor de código pois é leve, extensível e customizável. Vamos mostrar algumas extensões úteis que você deve instalar antes de começar a desenvolver software com .NET Core.
 ---
 
 O [Visual Studio Code](https://code.visualstudio.com/) é um ótimo editor de código pois é leve, extensível e customizável. Vamos mostrar algumas extensões úteis que você deve instalar antes de começar a desenvolver software com .NET Core.
