@@ -4,6 +4,7 @@ title: O que é um teste de unidade
 comments: true
 categories: 
     - Testes de unidade
+description: Não encontrei uma definição formal do que é um teste de unidade, talvez porque eu não tenha procurado direito. Mas vamos explicar de forma resumida o que você precisa saber.
 ---
 
 Não encontrei uma definição formal do que é um teste de unidade, talvez porque eu não tenha procurado direito. Mas vamos explicar de forma resumida o que você precisa saber.

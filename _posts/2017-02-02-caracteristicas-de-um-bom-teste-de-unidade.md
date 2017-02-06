@@ -4,6 +4,7 @@ title: Características de um bom teste de unidade
 comments: true
 categories: 
     - Testes de unidade
+description: Um bom teste de unidade deve possuir, pelo menos, as 8 características que seguem.
 ---
 
 Um bom [teste de unidade]({{site.baseurl}}/o-que-e-um-teste-de-unidade) deve possuir, pelo menos, as 8 características que seguem.

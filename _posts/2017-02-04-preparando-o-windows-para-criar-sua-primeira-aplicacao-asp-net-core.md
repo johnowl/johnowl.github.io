@@ -5,6 +5,8 @@ comments: true
 categories: 
     - .NET Core
     - Microsoft
+description: O Yeoman é um utilitário de linha de comando que vamos usar para criar um novos projetos .NET Core. Ele é responsável por criar a estrutura básica de nossas aplicações, da mesma forma que é feita pelo Visual Studio. A principal diferença é que ele é muito mais legal, pois você faz tudo via linha de comando.
+image: /public/images/2017-02-06/yo-ok.png
 ---
 
 O [Yeoman](http://yeoman.io/) é um utilitário de linha de comando que vamos usar para criar um novos projetos .NET Core. Ele é responsável por criar a estrutura básica de nossas aplicações, da mesma forma que é feita pelo Visual Studio. A principal diferença é que ele é muito mais legal, pois você faz tudo via linha de comando.

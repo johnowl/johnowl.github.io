@@ -20,7 +20,7 @@
   {% if page.image == "" or page.image == nil %}
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/public/images/fb_capa.jpg">
   {% else %}
-    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}">
   {% endif %}  
   
 

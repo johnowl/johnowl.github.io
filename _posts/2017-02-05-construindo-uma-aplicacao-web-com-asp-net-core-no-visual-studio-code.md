@@ -7,6 +7,8 @@ categories:
     - ASP.NET Core
     - Visual Studio Code
     - Microsoft
+description: Vamos construir nossa primeira aplicação ASP.NET Core usando Visual Studio Code no Windows.
+image: /public/images/2017-02-06/yo-aspnet.png
 ---
 
 Vamos construir nossa primeira aplicação ASP.NET Core usando Visual Studio Code no Windows.
