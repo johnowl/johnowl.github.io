@@ -11,7 +11,7 @@
   <meta property="og:title" content="{{ page.title }}">
 
     {% if page.description == "" or page.description == nil %}
-    <meta property="og:description" content="site.description">
+    <meta property="og:description" content="{{ site.description }}">
   {% else %}
     <meta property="og:description" content="{{ page.description }}">
   {% endif %}
