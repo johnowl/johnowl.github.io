@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Preparando o Windows para criar sua primeira aplicação ASP.NET Core
+title: Preparando o Windows para criar sua primeira aplicação ASP.NET Core com Visual Studio Code
 comments: true
 categories: 
     - .NET Core
