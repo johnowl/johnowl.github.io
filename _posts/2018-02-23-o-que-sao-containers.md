@@ -6,6 +6,7 @@ categories:
     - Docker
     - Containers
 description: O que são containers? Por que surgiram? Quais os benefícios eles trazem?
+image: /public/images/2018-02-23/containers.jpg
 ---
 
 Antes de entender o que são **containers** precisamos olhar como a publicação de aplicações web tem sido feita e quais os problemas eram enfrentados no deploy de aplicações e manutenção da **infraestrutura**. Imagina que você tem um e-commerce com os módulos: produtos, clientes, pedidos, promoções, entrega e pagamento. No final do seu deploy é gerado um pacote com todos os componentes necessários para sua aplicação rodar em produção.
