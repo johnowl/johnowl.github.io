@@ -19,7 +19,7 @@ Feito isso, agora você tem sua aplicação rodando em três máquinas e está c
 
 Uma das soluções inventadas para solucionar esse tipo de problema é a **computação em nuvem**! Dessa forma você não precisa se preocupar com **máquinas físicas**, você tem máquinas virtuais que podem estar rodando em qualquer computador e o processo de criação de **máquinas virtuais** é muito mais rápido do que o **provisionamento** de máquinas físicas. Poxa, legal, agora é muito mais fácil pra mim. Então por que inventaram os **containers**? Os **containers** ajudam a otimizar os recursos das máquinas e são muito mais rápidos de serem provisionados que máquinas virtuais! Veja a imagem abaixo:
 
-![Máquinas Virtuais versus Containers, crédito: docker.com]({{site.baseurl}}/public/images/2018-02-28/containers-vs-vms.jpg)
+![Máquinas Virtuais versus Containers, crédito: docker.com]({{site.baseurl}}/public/images/2018-02-23/containers-vs-vms.jpg)
 
 Na utilização de máquinas virtuais, você tem um computador com um sistema operacional completo para hospedar várias máquinas virtuais. Cada máquina virtual tem um cópia completa do sistema operacional, sua aplicação e todas as suas dependências. Com a utilização de **containers** a **máquina hospedeira** compartilha os componentes do sistema operacional, o **container** contém somente sua aplicação e as **dependências**. E tudo continua completamente **isolado** como nas máquinas virtuais.
 
