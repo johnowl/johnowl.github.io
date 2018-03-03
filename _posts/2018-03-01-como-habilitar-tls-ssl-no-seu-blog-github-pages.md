@@ -6,7 +6,7 @@ categories:
     - GitHub Pages
     - Segurança
 description: Aprenda como habilitar o SSL no seu blog GitHub Pages e deixe a navegação dos seus leitores mais segura.
-image: /public/images/2017-02-06/vscode.png
+image: /public/images/2018-03-01/cloudflare.png
 ---
 
 # Como habilitar HTTPS no seu blog GitHub Pages
