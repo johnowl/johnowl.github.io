@@ -9,8 +9,6 @@ description: Aprenda como habilitar o SSL no seu blog GitHub Pages e deixe a nav
 image: /public/images/2018-03-01/cloudflare.png
 ---
 
-# Como habilitar HTTPS no seu blog GitHub Pages
-
 Esse procedimento serve para habilitar o  TLS/SSL no seu blog, isso fará com que seu blog fique com aquele cadeado de segurança na barra de endereço dos navegadores. Por que isso é importante? A navegação entre o usuário e seu blog deve ser algo privado, e o protocolo de segurança serve para evitar ataques [man-in-the-middle](https://pt.wikipedia.org/wiki/Ataque_man-in-the-middle)
  e [eavesdropping](https://pt.wikipedia.org/wiki/Eavesdropping). Além disso, o Google prioriza a indexação de sites servidos via HTTPS, e aparecer nos buscadores é muito importante para criadores de conteúdo.
 
