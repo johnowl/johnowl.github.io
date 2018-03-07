@@ -9,7 +9,7 @@ permalink: /:title/
 title:            John Owl
 tagline:          'Blog sobre desenvolvimento de software.'
 description:      'Um blog sobre desenvolvimento de software por <a href="https://github.com/johnowl">@johnowl</a>.'
-url:              http://blog.johnowl.com
+url:              https://blog.johnowl.com
 baseurl:          ''
 
 author:
