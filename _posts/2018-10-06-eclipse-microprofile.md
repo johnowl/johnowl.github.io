@@ -9,7 +9,7 @@ description: O que é e para que serve Eclipse MicroProfile?
 image: /public/images/2018-10-06/microprofile-logo.png
 ---
 
-Eclipse MicroProfile é uma iniciativa que visa otimizar o Java EE para a arquitetura de microsserviços. O objetivo do Eclipse Microprofile é [definir um padrão de APIs do Java EE](2018-10-09-quais-apis-o-eclipse-microprofile-oferece) que sejam portáteis e rodem na runtime de qualquer fornecedor. As principais empresas que apoiam esse projeto são IBM, Red Hat, Tomitribe e Payara.
+Eclipse MicroProfile é uma iniciativa que visa otimizar o Java EE para a arquitetura de microsserviços. O objetivo do Eclipse Microprofile é [definir um padrão de APIs do Java EE]({{site.baseurl}}/quais-apis-o-eclipse-microprofile-oferece) que sejam portáteis e rodem na runtime de qualquer fornecedor. As principais empresas que apoiam esse projeto são IBM, Red Hat, Tomitribe e Payara.
 
 A motivação por trás do MicroProfile veio dos desenvolvedores Java que gostariam de utilizar tecnologias Java EE para criar microsserviços e estavam em busca de funcionalidades como Service Discovery, Health Checks, Circuit Breakers, etc. Além disso a comunidade Java EE também queria evitar a fragmentação, visto que estavam sendo adotadas diferentes formas de desenvolver microsserviços. Por causa disso, e no espírito de comunidade Open Source, eles decidiram colaborar e trabalhar juntos para criar essa iniciativa.
 

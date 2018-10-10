@@ -10,7 +10,7 @@ description: Descubra o que você pode fazer com Eclipse Microprofile 1.3.
 image: /public/images/2018-10-09/microprofile-13-apis.png
 ---
 
-Se você perdeu a introdução sobre o Eclipse Microprofile, veja em ["Eclipse Microprofile"](2018-10-06-eclipse-microprofile).
+Se você perdeu a introdução sobre o Eclipse Microprofile, veja em ["Eclipse Microprofile"]({{site.baseurl}}/eclipse-microprofile).
 
 Uma implementação do Eclipse Microprofile 1.3 deve suportar pelo menos as APIs abaixo. No entanto as implementações podem possuir mais APIs ou versões mais atualizadas das APIs do que as que seguem. Além disso essa versão é compatível com Java SE 8 e oferece suporte às Common Annotations for the Java™ Platform 1.2.
 
