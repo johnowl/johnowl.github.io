@@ -12,15 +12,13 @@ image: /public/images/2018-10-09/microprofile-13-apis.png
 
 Se você perdeu a introdução sobre o Eclipse Microprofile, veja em ["Eclipse Microprofile"](2018-10-06-eclipse-microprofile).
 
-Uma implementação do Eclipse Microprofile 1.3 deve suportar pelo menos as APIs abaixo. No entanto as implementações podem possuir mais APIs ou versões mais atualizadas das APIs do que as que seguem.
+Uma implementação do Eclipse Microprofile 1.3 deve suportar pelo menos as APIs abaixo. No entanto as implementações podem possuir mais APIs ou versões mais atualizadas das APIs do que as que seguem. Além disso essa versão é compatível com Java SE 8 e oferece suporte às Common Annotations for the Java™ Platform 1.2.
 
 ![APIs  Eclipse Microprofile 1.3]({{site.baseurl}}/public/images/2018-10-09/microprofile-13-apis.png)
 
-* Java SE 8
 * CDI (Contexts and Dependency Injection for Java EE) 1.2
 * JAX-RS (Java™ API for RESTful Web Services) 2.0.1
 * JSON-P (Java™ API for JSON Processing) 1.0
-* Common Annotations for the Java™ Platform 1.2
 * Eclipse MicroProfile Config 1.2
 * Eclipse MicroProfile Fault Tolerance 1.0
 * Eclipse MicroProfile Health Check 1.0
