@@ -10,20 +10,20 @@ description: Aprenda 3 formas de reescrever URLs no AWS API Gateway.
 image: /public/images/2020-04-11/aws-api-gateway.png
 ---
 
-Quando falamos de API Gateway, um de seus usos pode ser para expor APIs de sistemas legados. Nesse caso pode surgir um problema de falta de padronização de URL, é aí que a reescrita de URL surge como uma opção para expor algo padronizado para o mundo externo.
+Quando falamos de API Gateway, um de seus usos pode ser expor APIs de sistemas legados. Nesse caso pode surgir um problema de falta de padronização de URL, é aí que a reescrita de URL surge como uma opção para expor algo padronizado para o mundo externo.
 
 ## Reescrita simples
 
-Imagine o seguinte cenário, tenho a url `https://internal.site.com/api/system-x/users?userId=123` e gostaria de expor essa URL através do AWS API Gateway como `https://www.site.com/v1/users/123`
+Imagine o seguinte cenário, tenho a URL `https://internal.site.com/api/system-x/users?userId=123` e gostaria de expor essa URL através do AWS API Gateway como `https://www.site.com/v1/users/123`
 
 Para este cenário simples, basta criar a estrutura de resources, um método GET com integração do tipo HTTP e no campo "Endpoint Url" usar o valor `https://internal.site.com/api/system-x/users?userId={userId}`.
 
 ## Mapeando valores do header para query string
 
-Agora imagine que a URL do sistema legado também precisa saber qual aplicação está chamando essa url e o identificador da aplicação é enviado em um header chamado `x-application-id`. Ou seja, agora a url do sistema legado é algo como `https://internal.site.com/api/system-x/users?userId={userId}&app={appId}`. Veja como fazer no passo-a-passo abaixo:
+Agora imagine que a URL do sistema legado também precisa saber qual aplicação a está chamando, e o identificador da aplicação é enviado em um header chamado `x-application-id`. Ou seja, agora a URL do sistema legado é algo como `https://internal.site.com/api/system-x/users?userId={userId}&app={appId}`. Veja como fazer no passo-a-passo abaixo:
 
 1. em "Method Request", adicione o header `x-application-id` 
-2. vá para "Integration request" e deixe a url da forma que está: `https://internal.site.com/api/system-x/users?userId={userId}`
+2. vá para "Integration request" e deixe a URL da forma que está: `https://internal.site.com/api/system-x/users?userId={userId}`
 3. ainda em "Integration Request", abra a opção "URL Query String Parameters" e clique em "Add query string"
 4. preencha o campo "name" com `appId` e o campo "Mapped from" com `method.request.header.x-application-id` (isso só funciona pois já declaramos esse header no "Method request")
 6. abra a opção HTTP Headers e exclua o header `x-application-id`
