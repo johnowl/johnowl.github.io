@@ -39,8 +39,8 @@ O Spring Framework está sendo alterado para também suportar Ahead Of time Comp
 
 Uma das grandes vantagens de trabalhar com microsserviços é pode experimentar novas tecnologias. Então pode ser interessante experimentar o Micronaut em algum microsserviço de baixa relevância, dessa forma será possível avaliar o novo framework no ambiente de produção.
 
-O uso do Micronaut pode trazer redução de custos de infraestrutura pois o uso de memória é menor que o Spring. Vale a pena analisar se o framework atende os casos de uso da sua empresa e se a redução de memória é relevante no seu contexto.
+O uso do Micronaut pode trazer redução de custos de infraestrutura, pois o uso de memória é menor que o Spring. Vale a pena analisar se o framework atende os casos de uso da sua empresa e se a redução de memória é relevante no seu contexto.
 
-Além disso, um dos problemas do Spring, é que o tempo de inicialização pode ficar cada vez maior com o crescimento do serviço. Para serviços que são publicados em produção com frequência isso pode ser um problema. No Micronaut, o tempo tende a ser constante pois a injeção de dependência é processada em tempo de compilação.
+Além disso, um dos problemas do Spring é que o tempo de inicialização pode ficar cada vez maior com o crescimento do serviço. Para serviços que são publicados em produção com frequência isso pode ser um problema. No Micronaut, o tempo tende a ser constante por causa da injeção de dependência ser processada em tempo de compilação.
 
 Para otimizar ainda mais o consumo de infraestrutura, o Micronaut pode ser combinado com a compilação AOT da GraalVM, reduzindo ainda mais o uso de memória e deixando o tempo de inicialização da aplicação muito pequeno. Mas fique atento pois um microsserviço que funciona na JVM pode não funcionar diretamente ao ser compilado para código nativo.
