@@ -8,7 +8,7 @@ categories:
     - Java
     - Kotlin
 description: Crie seu primeiro microsserviço com Kotlin e Micronaut e compile para código nativo usando a GraalVM. Será que a compilação para código nativo é melhor do que rodar os bytecodes na JVM?
-image: /public/images/2021-06-27/micronaut.png
+image: /public/images/2021-07-05/running-micronaut-application.png
 ---
 
 ## Objetivo
