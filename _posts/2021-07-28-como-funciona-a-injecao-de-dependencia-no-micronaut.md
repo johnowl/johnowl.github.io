@@ -10,7 +10,7 @@ categories:
     - Injeção de dependência
     - Inversão de controle
 description: Entenda o que é e como funciona a injeção de dependência no Micronaut e porque isso faz sua aplicação economizar memória.
-image: /public/images/2021-07-28/upside-down.jpg
+image: /public/images/2021-07-28/upsidedown.jpg
 ---
 
 ## Introdução
