@@ -10,7 +10,7 @@ categories:
     - Injeção de dependência
     - Inversão de controle
 description: Veja algumas soluções que o Micronaut trás para resolver problemas de injeção de dependências.
-image: /public/images/2021-08-01/injecao.jpg
+image: /public/images/2021-08-01/injecao-luva-roxa.jpeg
 ---
 
 ## Introdução
