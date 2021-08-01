@@ -1,3 +1,17 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@john_owl" />
 <meta name="twitter:site" content="@john_owl" />
+<meta name="twitter:site" content="@john_owl" />
+<meta name="twitter:title" content="{{ page.title }}" />
+
+{% if page.image == "" or page.image == nil %}
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/public/images/fb_capa.jpg" />
+{% else %}
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
+{% endif %}
+
+{% if page.description == "" or page.description == nil %}
+<meta name="twitter:description" content="Um blog sobre desenvolvimento de software por John Owl." />
+{% else %}
+<meta name="twitter:description" content="{{ page.description }}" />
+{% endif %}
