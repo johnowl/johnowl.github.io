@@ -1,0 +1,10 @@
+{
+  "simulation": "com.johnowl.TokenValidationSimulation",
+  "simulationId": "tokenvalidationsimulation",
+  "start": 1629065471194,
+  "description": "",
+  "scenarios": ["Gera e valida token"],
+  "assertions": [
+
+  ]
+}
