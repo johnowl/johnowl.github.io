@@ -1,0 +1,10 @@
+{
+  "simulation": "com.johnowl.CoroutineSimulation",
+  "simulationId": "coroutinesimulation",
+  "start": 1630015886024,
+  "description": "",
+  "scenarios": ["Blocking Scenario"],
+  "assertions": [
+
+  ]
+}

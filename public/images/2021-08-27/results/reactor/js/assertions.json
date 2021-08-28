@@ -1,0 +1,10 @@
+{
+  "simulation": "com.johnowl.ReactorSimulation",
+  "simulationId": "reactorsimulation",
+  "start": 1630016678050,
+  "description": "",
+  "scenarios": ["Reactor Scenario"],
+  "assertions": [
+
+  ]
+}
