@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Apresentando o Micronaut data
+title: Apresentando o Micronaut Data
 comments: true
 categories: 
     - Micronaut
@@ -20,6 +20,7 @@ Quem já trabalha com Java provavelmente já conhece a JPA (Java Persistence API
 Spring Data JPA permite que você crie interfaces com métodos que descrevem as consulta e o framework se encarrega de implementar a classe e criar as queries do banco de dados. Exemplo:
 
 ```koltin
+@Repository
 interface UserRepository : CrudRepository<Long, User> {
   fun findByName(name: String): List<User>
   fun findByCountry(country: String): List<User>
