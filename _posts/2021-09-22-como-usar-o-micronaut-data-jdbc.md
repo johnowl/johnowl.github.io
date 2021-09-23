@@ -59,7 +59,7 @@ Como podemos ver no exemplo acima, além de definir a entidade e o repositório,
 4. Indicamos que nosso repositório é do tipo `JDBC` e que o banco de dados usado será o PostgreSQL.
 5. Nossa interface herda de outra interface, aqui informamos qual é a entidade e o tipo da chave primária.
 
-Pronto! Agora temos como injetar o repositório em alguma classe e usá-lo para inserir, consulta, apagar ou atualizar dados. Veja alguns métodos disponíveis:
+Pronto! Agora temos como injetar o repositório em alguma classe e usá-lo para inserir, consultar, apagar ou atualizar dados. Veja alguns métodos disponíveis:
 
 ```kotlin
 // Adiciona um novo usuário e retorna 
