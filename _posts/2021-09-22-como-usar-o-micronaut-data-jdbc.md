@@ -257,6 +257,11 @@ data class Vehicle(
 )
 ```
 
+1. Tipo do relacionamento usado é ONE_TO_MANY.
+2. Adicionamos uma nova propriedade que indica qual campo contém a referência da entidade A.
+3. Como um usuário pode ter mais de um veículo, usamos uma lista.
+4. Propriedade para guardar a referência da entidade A, no banco de dados ela será transformada em um campo chamado `user_id` caso você estja usando a geração automática de schema do Micronaut.
+
 Fiz um teste executando esse insert:
 
 ```kotlin
@@ -290,11 +295,6 @@ postgres=# select * from public.vehicle;
   1 |       1 | Golf  | VW      | 123ABC
 (1 row)
 ```
-
-1. Tipo do relacionamento usado é ONE_TO_MANY.
-2. Adicionamos uma nova propriedade que indica qual campo contém a referência da entidade A.
-3. Como um usuário pode ter mais de um veículo, usamos uma lista.
-4. Propriedade para guardar a referência da entidade A, no banco de dados ela será transformada em um campo chamado `user_id` caso você estja usando a geração automática de schema do Micronaut.
 
 ## Relacionamento muitos para muitos (M:N)
 
