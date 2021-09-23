@@ -84,7 +84,7 @@ repository.deleteById(1)
 
 ## Como o Micronaut Data JDBC funciona
 
-Ao compilar sua aplicação o Micronaut irá implementar as classes e gerar todas as queries. É possível ver que realmente os comandos SQL foram gerados em tempo de compilação. Veja como:
+Ao compilar sua aplicação o Micronaut vai criar as classes que implementam as interfaces de repositórios e vai gerar todas as queries usando o dialte SQL do banco de dados definido no repositório. É possível ver que realmente os comandos SQL foram gerados em tempo de compilação. Veja como:
 
 1. Fazer build do projeto.
 2. Abrir o diretório build/lib e trocar a extensão do arquivo `nome-do-seu-projeto-0.1-all.jar` de `.jar` para `.zip` e descompactá-lo.
