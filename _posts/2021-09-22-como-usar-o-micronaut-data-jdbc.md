@@ -398,7 +398,7 @@ Os tipos de joins suportados pelo Micronaut Data JDBC são:
 | Tipo         | Descrição                                                |
 |--------------|----------------------------------------------------------|
 | LEFT         | Faz um LEFT JOIN sem trazer as entidades filhas          |
-| RIGHT        | Faz um LEFT JOIN sem trazer as entidades filhas          |
+| RIGHT        | Faz um RIGHT JOIN sem trazer as entidades filhas          |
 | INNER        | Faz um INNER JOIN sem trazer as entidades filhas         |
 | LEFT_FETCH   | Faz um LEFT JOIN trazendo os dados das entidades filhas  |
 | RIGHT_FETCH  | Faz um RIGHT JOIN trazendo os dados das entidades filhas |
