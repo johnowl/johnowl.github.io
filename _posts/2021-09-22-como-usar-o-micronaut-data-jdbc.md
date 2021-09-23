@@ -175,7 +175,7 @@ data class Rg(
 )
 ```
 
-Veja que adicionamos uma nova anotação no campo RG. Essa anotação possui duas informações imporantes:
+Veja que adicionamos uma nova anotação no campo RG. Essa anotação possui duas informações importantes:
 
 1. O tipo do relacionamento, onde indicamos que é do tipo ONE_TO_ONE.
 2. O campo `cascade` que indica que a entidade RG deve ser gravada automaticamente quando ocorrer uma inclusão e uma atualização da entidade `User`. Além dessas duas opções existe a opção `NONE`, que nunca irá gravar a entidade RG automaticamente.
