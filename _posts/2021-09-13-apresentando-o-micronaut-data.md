@@ -71,6 +71,13 @@ interface BookRepository : CrudRepository<Book, Long> {
 
 ## Suporte a Kotlin coroutines
 
+---
+**Atualização**
+
+O suporte a coroutines [estará disponível na versão 3.1](https://github.com/micronaut-projects/micronaut-data/issues/304) do Micronaut Data.
+
+---
+
 O Micronaut Data não é compatível com coroutines do Kotlin. No entanto, ele permite que você defina as respostas dos repositórios usando  `Publisher` do projeto [Reactive Streams](https://www.reactive-streams.org/) ou tipos do [RxJava 2](https://github.com/ReactiveX/RxJava) como o `Single`.
 
 Ao retornar um tipo reativo é possível usar as [extension functions](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-reactive/) `.await*()` das coroutines para aguardar a execução da consulta em uma coroutine sem bloquear a thread. Dessa forma você consegue ter um código assíncrono mas que executa de forma sequencial. O Micronaut irá executar a consulta em uma thread de IO, caso a implementação seja bloqueante.
@@ -78,3 +85,7 @@ Ao retornar um tipo reativo é possível usar as [extension functions](https://k
 ## Conclusão
 
 Mesmo sendo um framework novo e sem suporte a coroutines do Kotlin, o Micronaut já entrega algumas vantagens em relação ao Spring Framework. Micronaut ainda faz isso com uma performance melhor e de uma forma muito familiar para quem trabalha com Spring, facilitando para quem pensa em migrar de framework.
+
+## Atualizações
+
+21/09/2021 - adicionada nota sobre suporte a coroutines
