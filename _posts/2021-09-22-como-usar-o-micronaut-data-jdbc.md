@@ -260,7 +260,7 @@ data class Vehicle(
 1. Tipo do relacionamento usado é ONE_TO_MANY.
 2. Adicionamos uma nova propriedade que indica qual campo contém a referência da entidade A.
 3. Como um usuário pode ter mais de um veículo, usamos uma lista.
-4. Propriedade para guardar a referência da entidade A, no banco de dados ela será transformada em um campo chamado `user_id` caso você estja usando a geração automática de schema do Micronaut.
+4. Propriedade para guardar a referência da entidade A, no banco de dados ela será transformada em um campo chamado `user_id` caso você esteja usando a geração automática de schema do Micronaut.
 
 Fiz um teste executando esse insert:
 
@@ -280,7 +280,7 @@ userRepository.save(
 )
 ```
 
-Veja as tabelas criadas e dados adicionaos no PostgreSQL:
+Veja as tabelas criadas e dados adicionados no PostgreSQL:
 
 ```text
 postgres=# select * from public.user;
