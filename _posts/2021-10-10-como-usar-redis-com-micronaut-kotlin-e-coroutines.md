@@ -209,21 +209,28 @@ class LettuceCodecs(
 2. Recebemos um `ObjectMapper` que também é disponibilizado e gerenciado pelo Micronaut.
 3. Aqui criamos uma instância de `StatefulRedisConnection<String, User>` informando o codec que criamos no passo anterior.
 
-Finalmente, para gravar e ler um usuário você pode fazer algo parecido com os métodos abaixo:
+Finalmente, para gravar e ler um usuário você precisa receber uma instância de `StatefulRedisConnection<String, User>` e pode fazer algo parecido com os métodos abaixo:
 
 ```kotlin
-@Get("/read-user")
-suspend fun readUser(): User? {
-   val commands = userConnection.coroutines()
-   return commands.get("user1")
-}
+@Controller
+@OptIn(ExperimentalLettuceCoroutinesApi::class)
+class ExampleController(
+   private val userConnection: StatefulRedisConnection<String, User>
+) {
 
-@Get("/write-user")
-suspend fun writeUser(): User {
-   val commands = userConnection.coroutines()
-   val user = User("user1", "John Doe", LocalDateTime.now(Clock.systemUTC()))
-   commands.set("user1", user)
-   return user
+   @Get("/read-user")
+   suspend fun readUser(): User? {
+      val commands = userConnection.coroutines()
+      return commands.get("user1")
+   }
+
+   @Get("/write-user")
+   suspend fun writeUser(): User {
+      val commands = userConnection.coroutines()
+      val user = User("user1", "John Doe", LocalDateTime.now(Clock.systemUTC()))
+      commands.set("user1", user)
+      return user
+   }
 }
 ```
 
