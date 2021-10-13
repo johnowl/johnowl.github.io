@@ -46,7 +46,7 @@ implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive:1.5.2")
 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.5.2")
 ```
 
-A string de conexão está configurada no arquivo `application.yml` do projeto que foi gerado no Micronaut Lauch:
+A string de conexão está configurada no arquivo `application.yml` do projeto que foi gerado no Micronaut Launch:
 
 ```yaml
 redis:
@@ -70,7 +70,7 @@ class UserController(
 
 ## Como gravar uma string no Redis
 
-O próximo passo é criar uma função que irá gravar uma informação no Redis, vamos mapear essa função à rota `/save/{key}/{value}` conforme o código que segue:
+O próximo passo é criar uma função que irá gravar uma informação no Redis, vamos associar essa função com a rota `/save/{key}/{value}` conforme o código que segue:
 
 ```kotlin
 @Controller
