@@ -17,7 +17,7 @@ Em linguagens como C e C++ a pessoa programadora tem acesso direto à memória d
 
 Em Java ou outras linguagens que rodam na JVM como Kotlin não é preciso ter essa preocupação. Pois a JVM oferece um mecanismo inteligente que faz a alocação e desalocação da memória automaticamente.
 
-Mesmo assim é importante saber como o gerenciamento de memória da JVM funciona. Ter esse conhecimento pode ajuda e evitar problemas de performance causados por uso excessivo de memória além de facilitar a resolução de problemas desse tipo. O objetivo desse artigo é ser uma introdução ao assunto.
+Mesmo assim é importante saber como o gerenciamento de memória da JVM funciona. Ter esse conhecimento pode ajudar a evitar problemas de performance causados por uso excessivo de memória além de facilitar a resolução de problemas desse tipo. O objetivo desse artigo é ser uma introdução ao assunto.
 
 ## Como funciona a memória na JVM
 
