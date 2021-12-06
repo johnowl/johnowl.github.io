@@ -51,7 +51,7 @@ data class User(
 interface UserRepository : CrudRepository<User, Long> // (5)
 ```
 
-Como podemos ver no exemplo acima, além de definir a entidade e o repositório, precisamos adicionar algumas anotações neles. Veja o que elas significam:
+Como podemos ver no exemplo acima, além de definir a entidade e o repositório, precisamos adicionar algumas anotações. Veja o que elas significam:
 
 1. Indicamos que nossa `data class` é um entidade e que o nome da tabela é `users`.
 2. Definimos que o campo `id` deve ser considerado como chave primária na tabela.
@@ -84,7 +84,7 @@ repository.deleteById(1)
 
 ## Como o Micronaut Data JDBC funciona
 
-Ao compilar sua aplicação o Micronaut vai criar as classes que implementam as interfaces de repositórios e vai gerar todas as queries usando o dialte SQL do banco de dados definido no repositório. É possível ver que realmente os comandos SQL foram gerados em tempo de compilação. Veja como:
+Ao compilar sua aplicação o Micronaut vai criar as classes que implementam as interfaces de repositórios e vai gerar todas as queries usando o dialeto SQL do banco de dados definido no repositório. É possível ver que realmente os comandos SQL foram gerados em tempo de compilação. Veja como:
 
 1. Fazer build do projeto.
 2. Abrir o diretório build/lib e trocar a extensão do arquivo `nome-do-seu-projeto-0.1-all.jar` de `.jar` para `.zip` e descompactá-lo.
