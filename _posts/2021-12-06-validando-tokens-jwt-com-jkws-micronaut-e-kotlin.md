@@ -54,7 +54,7 @@ Um JWKS (Json Web Key Set) é um conjunto de chaves públicas que podem ser usad
 }
 ```
 
-Cada chave nessa lista possui um identificador único que é o mesmo `kid` usado no cabeçalho do token JWT, esse `kid` representa o identificador da chave pública que faz par com a chave privada que foi usada para assinar o token. Dessa forma é possível, a partir de um token JWT, encontrar a chave privada para validar a assinatura.
+Cada chave nessa lista possui um identificador único que é o mesmo `kid` usado no cabeçalho do token JWT, esse `kid` representa o identificador da chave pública que faz par com a chave privada que foi usada para assinar o token. Dessa forma é possível, a partir de um token JWT, encontrar a chave pública para validar a assinatura.
 
 ## Validando tokens JWT com Micronaut
 
