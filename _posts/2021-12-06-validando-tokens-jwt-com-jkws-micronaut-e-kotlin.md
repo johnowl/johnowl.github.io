@@ -58,7 +58,7 @@ Cada chave nessa lista possui um identificador único que é o mesmo `kid` usado
 
 ## Validando tokens JWT com Micronaut
 
-Imagine que você tem um microsserviço que expõe em `http://localhost:8081/keys` a lista de chaves que ele usa para assinar os tokens JWT. Você tem uma API protegida que um usuário só pode ter acesso com um token JWT válido.
+Imagine que você tem um microsserviço que expõe em `http://localhost:8081/keys` a lista de chaves públicas que podem ser usadas para validar a assinatura de tokens JWT. Você tem uma API protegida que um usuário só pode ter acesso com um token JWT válido.
 
 O primeiro passo é criar um projeto Micronaut adicionando a dependência `security-jwt`. Acesse <https://micronaut.io/launch/> e crie um novo projeto com a linguagem Kotlin e adicionando a feature `security-jwt`.
 
