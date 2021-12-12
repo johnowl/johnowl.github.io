@@ -18,13 +18,13 @@ image: /public/images/2021-12-12/lock-small.jpg
 
 Esse artigo mostra como usar o Micronaut para gerar tokens JWT assinados usando chaves simétricas e assimétricas. Além disso, ele também mostra como validar uma credencial antes de gerar o token.
 
-Para saber o que é um token JWT, você pode ler o artigo [Validando tokens JWT com JWKS, Micronaut e Kotlin](https://blog.johnowl.com/validando-tokens-jwt-com-jkws-micronaut-e-kotlin/), de forma resumida um token JWT é uma maneira segura de encapsular informações e transmiti-las por um canal inseguro. Tokens, em geral, são usados para acessar áreas protegidas de um sistema.
+Para saber o que é um token JWT, você pode ler o artigo [Validando tokens JWT com JWKS, Micronaut e Kotlin](https://blog.johnowl.com/validando-tokens-jwt-com-jkws-micronaut-e-kotlin/). De forma resumida um token JWT é uma maneira segura de encapsular informações e transmiti-las por um canal inseguro. Tokens, em geral, são usados para acessar áreas protegidas de um sistema.
 
 ## Chave simétrica e chave assimétrica
 
 Usamos criptografia para assinar um token JWT. Essa assinatura pode ser feita usando uma chave simétrica ou assimétrica.
 
-Um chave simétrica é um segredo que é usado tanto para assinar quanto para validar uma assinatura. Caso exista um sistema que gere os tokens e outro sistema que faça a validação da assinatura, é preciso compartilhar um mesmo segredo entre ambos os sitemas. Exemplo: HMAC + SHA256.
+Um chave simétrica é um segredo que é usado tanto para assinar quanto para validar uma assinatura. Caso exista um sistema que gere os tokens e outro sistema que faça a validação da assinatura, é preciso compartilhar um mesmo segredo entre ambos os sistemas. Exemplo de criptografia simétrica: HMAC + SHA256.
 
 Um chave assimétrica é composta de duas partes, uma chave pública e uma privada. A chave privada é usada para assinar o token JWT e a chave pública é usada para validar a assinatura. No exemplo mostrado acima, onde um sistema emite o token e outro faz a validação, o sistema que gera os tokens só precisa conhecer a chave privada e o sistema que faz a validação só precisa da chave pública. Exemplos de criptografia assimétrica: RSA, ECDSA.
 
@@ -64,7 +64,7 @@ class UserAuthenticationProvider : AuthenticationProvider {
 }
 ```
 
-O código acima valida se o usuário é igual a "user" e senha é igual a "123abc", caso positivo retornamos sucesso informando o identificador do usuário e quais roles eles tem acesso. Em caso de erro retornamos uma mensagem de erro.
+O código acima valida se o usuário é igual a "user" e senha é igual a "123abc", caso positivo retornamos sucesso informando o identificador do usuário e quais roles eles tem acesso. Se as credenciais não estiverem corretas retornamos uma mensagem de erro.
 
 Execute sua aplicação, por padrão ela irá iniciar na porta 8080. Em seguida faça uma chamada HTTP conforme abaixo:
 
@@ -90,6 +90,8 @@ Você deve ter recebido uma resposta parecida com a que segue:
     "expires_in": 3600
 }
 ```
+
+Como assim? Como essa mágica toda aconteceu? Veja abaixo onde fica armazenada a chave usada para assinar o token e de onde surgiu o path `/login`.
 
 ## Onde fica armazenada a chave usada pelo Micronaut?
 
@@ -123,13 +125,13 @@ Se você copiar o valor do campo `access_token` e colar no site <https://jwt.io>
 
 O identificador do usuário foi gravado na claim `sub` e a role `ADMIN` ficou na claim `roles`. Além disso o token possui as claims `nbf` que indica a partir de que momento o token é válido, a data de expiração na claim `exp`, a data de emissão na claim `iat` e o nome do microsserviço que emitiu o token na claim `iss`.
 
-No cabeçalho do token JWTK podemos identificar que o algoritmo `HS256` foi usado pelo Micronaut para assinar o token, HS256 significa HMCA + SHA256.
+No cabeçalho do token JWT podemos identificar que o algoritmo `HS256` foi usado pelo Micronaut para assinar o token, HS256 significa HMCA + SHA256.
 
 Por padrão o Micronaut usa uma chave simétrica para assinar e validar os tokens, a chave usada fica armazenada no arquivo de configuração da aplicação, para nosso exemplo é "pleaseChangeThisSecretForANewOne".
 
 ## Como gerar tokens JWT no Micronaut usando chave assimétrica?
 
-Em nosso exemplos vamos usar um par de chaves RSA com tamanho de 2048 bits. O primeiro passo é implementar a interface `RSASignatureGeneratorConfiguration` conforme exemplo abaixo:
+Em nosso exemplo vamos usar um par de chaves RSA com tamanho de 2048 bits para assinar nossos tokens JWT. Para fazer isso, o primeiro passo é implementar a interface `RSASignatureGeneratorConfiguration` conforme exemplo abaixo:
 
 ```kotlin
 @Singleton
@@ -174,7 +176,7 @@ micronaut:
     authentication: bearer
 ```
 
-Faça uma nova chamada para a API de login e analise o token novamente, perceba que o algoritmo usado agora é RS256. Isso indica que você está usando chave assimétrica para assinar o token, para ser mais específico, o Micronaut está usando RSA + SHA256.
+Faça uma nova chamada para a API de login e analise o token novamente, perceba que o algoritmo usado agora é RS256. Isso indica que você está usando chave assimétrica RSA + SHA256 para assinar o token.
 
 ## Conclusão
 
