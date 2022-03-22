@@ -134,7 +134,7 @@ Adicionamos uma pausa, para que o teste fique mais parecido com o mundo real.
         .body(ElFileBody("bodies/credentials.json"))
         .check(jsonPath("$.token").find.saveAs("token"))
     )
-    .pause(300.milliseconds)
+    .pause(50.milliseconds)
 ```
 
 O passo 1 está pronto, vamos construir o segundo passo para validar o token gerado no passo anterior. No segundo passo também usamos um payload gravado no diretório `bodies`, a diferença é que ele possui uma variável que será substituída automaticamente pelo Gatling. Crie um arquivo chamado `token.json` no diretório `src/gatling/bodies` com o conteúdo:
@@ -149,17 +149,12 @@ Nosso teste está assim:
 
 ```scala
   val scn = scenario("Faz login e valida token gerado")
-    .exec(http("Gera token com credencial válida")
+    .exec(http(""Gera token usando credencial válida")
       .post("/auth/v1/tokens")
-      .body(ElFileBody("bodies/login/onboarding/valid_credential.json"))
-      .virtualHost("api-dev.cartaobranco.com")
+      .body(ElFileBody("bodies/credentials.json"))
       .check(jsonPath("$.token").find.saveAs("token"))
     )
     .pause(50.milliseconds)
-    .exec { session =>
-      logger.info("token"+ session("token").as[String])
-      session
-    }
     .exec(http("Valida token")
       .post("/auth/v1/tokens/validate")
       .body(ElFileBody("bodies/login/onboarding/validate_token.json"))
