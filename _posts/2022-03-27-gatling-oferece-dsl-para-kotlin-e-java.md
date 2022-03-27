@@ -8,7 +8,7 @@ categories:
     - Test
     - Load Test
     - Performance Test
-description: Veja duas formas de configurar o Logback para formatar os logs em Json. Uma forma é usando o arquivo de configuração do Logback e a outra é programaticamente usando Kotlin.
+description: Agora é possível escrever seus testes de performance com Gatling usando Kotlin ou Java.
 image: /public/images/2022-03-27/speed-small.jpg
 ---
 
