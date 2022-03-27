@@ -15,7 +15,7 @@ image: /public/images/2021-08-15/teste-de-carga.jpeg
 
 Antes de conhecer o [Gatling](https://gatling.io/), o que é um teste de carga? É um teste cujo objetivo é entender como uma aplicação se comporta com determinada carga, geralmente usuários simultâneos, sem comprometer a experiência de uso. Um exemplo poderia ser: minha aplicação consegue responder abaixo de 700ms, com taxa de sucesso acima de 99%, ao receber um tráfego de 100 transações por segundo no fluxo de login, executando em uma EC2 (máquina virtual da AWS) com 2 processadores e 4GB de RAM?
 
-O Gatling se auto denomina como teste de carga como código, pois você programa para construir seus testes de carga. O Gatling foi construído com a linguagem de programação Scala e uma ferramenta chamada akka. O akka é um kit de ferramentas para construção de aplicações orientadas a mensagens (message-driven) com alta concorrência, distrubuídas e resilientes ele funciona com as linguagens Java e Scala. O uso dessa stack de tecnologia permite que uma única instância do Gatling abra milhares de conexões simultâneas com a aplicação sendo testada.
+O Gatling se auto denomina como teste de carga como código, pois você programa para construir seus testes de carga. O Gatling foi construído com a linguagem de programação Scala e uma ferramenta chamada akka. O akka é um kit de ferramentas para construção de aplicações orientadas a mensagens (message-driven) com alta concorrência, distribuídas e resilientes ele funciona com as linguagens Java e Scala. O uso dessa stack de tecnologia permite que uma única instância do Gatling abra milhares de conexões simultâneas com a aplicação sendo testada.
 
 Nesse momento você já deve estar se perguntando: "poxa, mas eu escrevo meu código em Kotlin ou Java ou Groovy ou sua linguagem do dia a dia. Então vou ter que aprender outra linguagem?". Não precisa, você tem que aprender como funciona a DSL do Gatling, claro que um pouco de conhecimento em Scala pode facilitar o seu dia a dia, mas não é pré-requisito.
 
@@ -134,7 +134,7 @@ Adicionamos uma pausa, para que o teste fique mais parecido com o mundo real.
         .body(ElFileBody("bodies/credentials.json"))
         .check(jsonPath("$.token").find.saveAs("token"))
     )
-    .pause(300.milliseconds)
+    .pause(50.milliseconds)
 ```
 
 O passo 1 está pronto, vamos construir o segundo passo para validar o token gerado no passo anterior. No segundo passo também usamos um payload gravado no diretório `bodies`, a diferença é que ele possui uma variável que será substituída automaticamente pelo Gatling. Crie um arquivo chamado `token.json` no diretório `src/gatling/bodies` com o conteúdo:
@@ -149,17 +149,12 @@ Nosso teste está assim:
 
 ```scala
   val scn = scenario("Faz login e valida token gerado")
-    .exec(http("Gera token com credencial válida")
+    .exec(http(""Gera token usando credencial válida")
       .post("/auth/v1/tokens")
-      .body(ElFileBody("bodies/login/onboarding/valid_credential.json"))
-      .virtualHost("api-dev.cartaobranco.com")
+      .body(ElFileBody("bodies/credentials.json"))
       .check(jsonPath("$.token").find.saveAs("token"))
     )
     .pause(50.milliseconds)
-    .exec { session =>
-      logger.info("token"+ session("token").as[String])
-      session
-    }
     .exec(http("Valida token")
       .post("/auth/v1/tokens/validate")
       .body(ElFileBody("bodies/login/onboarding/validate_token.json"))
